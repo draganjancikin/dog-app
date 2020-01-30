@@ -20,4 +20,27 @@ img {
 }
 
 
-/********** ___ **********/
+/********** Header **********/
+
+header {
+  background-color: cadetblue;
+  color: #fff;
+  padding: 1rem;
+}
+
+.brend {
+  display: inline-block;
+}
+
+.breeds {
+  float: right;
+}
+
+
+/********** Section **********/
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
