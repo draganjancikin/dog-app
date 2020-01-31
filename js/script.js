@@ -1,7 +1,9 @@
 // Variables ===================================================================
+
 //   - with HTML elements ......................................................
 const breeds = document.querySelector(".breeds");
 const dog = document.querySelector(".dog");
+let dogImgUrl = "no url";
 
 //   - with API ................................................................
 const BREEDS_URL = "https://dog.ceo/api/breeds/list/all";
@@ -33,12 +35,28 @@ breeds.addEventListener("change", function(event){
   
   // when change heapens catch breed
   const breed = event.target.value;
-  console.log(breed);
   
   // define dog variable with API
   const DOG_BY_BREED_URL = `https://dog.ceo/api/breed/${breed}/images/random`;
-  console.log(DOG_BY_BREED_URL);
-
-  // to do: call function that get dog API and give dog picture
+  
+  // call function that get dog API and add dog image to html
+  getDog(DOG_BY_BREED_URL);
 
 });
+
+
+// Function ==========================================================
+
+// Get image from API url and add image to html ...................... 
+function getDog(url){
+  fetch(url)
+  .then(function(response){
+    return response.json();
+  })
+  .then(function(data){
+    dogImgUrl = data.message;
+    console.log("in fuction " + dogImgUrl);
+    // todo: add image to html
+    
+  });
+}
