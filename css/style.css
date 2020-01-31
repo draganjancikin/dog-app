@@ -40,7 +40,29 @@ header {
 /********** Section **********/
 
 section {
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.loader {
+  display: none;
+  text-align: center;
+  font-size: 3rem;
+  animation: rotate 1.5s infinite linear;
+}
+
+.dog-img {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+@keyframes rotate {
+  to { 
+    transform: rotateZ(360deg);
+  }
 }
