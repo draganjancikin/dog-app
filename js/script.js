@@ -7,6 +7,7 @@ const dog = document.querySelector(".dog");
 const BREEDS_URL = "https://dog.ceo/api/breeds/list/all";
 const DOG_URL = "https://dog.ceo/api/breeds/image/random";
 
+
 // Fill select tag with breeds =================================================
 fetch(BREEDS_URL)
   .then(function(response){
@@ -25,3 +26,19 @@ fetch(BREEDS_URL)
       breeds.appendChild(option);
     }
   });
+
+
+// Event Listeners =============================================================
+breeds.addEventListener("change", function(event){
+  
+  // when change heapens catch breed
+  const breed = event.target.value;
+  console.log(breed);
+  
+  // define dog variable with API
+  const DOG_BY_BREED_URL = `https://dog.ceo/api/breed/${breed}/images/random`;
+  console.log(DOG_BY_BREED_URL);
+
+  // to do: call function that get dog API and give dog picture
+
+});
