@@ -11,13 +11,15 @@ const BREEDS_URL = "https://dog.ceo/api/breeds/list/all";
 const DOG_URL = "https://dog.ceo/api/breeds/image/random";
 
 
-// Event Listeners =============================================================
+// Event Listener ==============================================================
+
+// Add event listener to breeds ................................................
 breeds.addEventListener("change", function(event){
-  // when change heapens catch breed
+  // when breeds change, catch breed
   const breed = event.target.value;
-  // define dog variable with API
+  // make API url with breed
   const DOG_BY_BREED_URL = `https://dog.ceo/api/breed/${breed}/images/random`;
-  // call function that get dog API and add dog image to html
+  // call function that get image from API url and show image on page
   getDog(DOG_BY_BREED_URL);
 });
 
@@ -37,13 +39,12 @@ function getDog(url){
   img.classList.remove("show");
 
   fetch(url)
-    .then(function(response){
-      return response.json();
-    })
+    .then(response => response.json())
     .then(function(data){
       let dogImgUrl = data.message;
       img.src = dogImgUrl; // add image to html 
       
+      // check when img load
       img.addEventListener('load', function (event) {
         // hide loader and show image after image load
         loader.classList.remove("show");
@@ -56,9 +57,7 @@ function getDog(url){
 // Get breeds from dog.ceo API and fill select tag with breeds .................
 function getBreeds(url){
   fetch(url)
-    .then(function(response){
-      return response.json();
-    })
+    .then(response => response.json())
     .then(function(data){
       const breedsObj = data.message;
       const breedsArr = Object.keys(breedsObj); // Transform Object to Array
