@@ -3,12 +3,14 @@
 //   - with HTML elements ......................................................
 const breeds = document.querySelector(".breeds");
 const dog = document.querySelector(".dog");
-let dogImgUrl = "no url";
+const img = document.querySelector(".dog-img");
 
 //   - with API ................................................................
 const BREEDS_URL = "https://dog.ceo/api/breeds/list/all";
 const DOG_URL = "https://dog.ceo/api/breeds/image/random";
 
+
+getDog(DOG_URL);
 
 // Fill select tag with breeds =================================================
 fetch(BREEDS_URL)
@@ -54,9 +56,8 @@ function getDog(url){
     return response.json();
   })
   .then(function(data){
-    dogImgUrl = data.message;
-    console.log("in fuction " + dogImgUrl);
-    // todo: add image to html
-    
+    let dogImgUrl = data.message;
+    // add image to html
+    img.src = dogImgUrl;
   });
 }
