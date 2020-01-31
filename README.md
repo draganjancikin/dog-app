@@ -1,2 +1,2 @@
 # dog-app
-Select breed and get dog picture using Dog API. HTML, CSS, JavaScript
+Select breed and get dog picture using Dog API from dog.ceo . HTML, CSS, JavaScript
