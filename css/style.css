@@ -12,11 +12,12 @@ body, h1 {
   margin: 0;
   padding: 0;
   font-weight: normal;
+  
 }
 
 img {
   max-width: 100%;
-  height: auto;
+  /* height: auto; */
 }
 
 
@@ -30,17 +31,20 @@ header {
 
 .brend {
   display: inline-block;
+  font-size: 2.8rem;
 }
 
 .breeds {
   float: right;
+  font-size: 1.5rem;
+  margin-top: 0.6rem;
 }
 
 
 /********** Section **********/
 
 section {
-  margin-top: 2rem;
+  margin-top: 1.0rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,7 +53,7 @@ section {
 .loader {
   display: none;
   text-align: center;
-  font-size: 3rem;
+  font-size: 3.0rem;
   animation: rotate 1.5s infinite linear;
 }
 
@@ -64,5 +68,63 @@ section {
 @keyframes rotate {
   to { 
     transform: rotateZ(360deg);
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .dog-img {
+    min-width: 460px;
+    max-height: 700px;
+  }
+}
+
+/* Small devices (portrait tablets and midle phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .dog-img {
+    min-width: 580px;
+    max-height: 800px;
+  }
+}
+
+/* Medium devices (portnait midle tablets and large phones, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .dog-img {
+    min-width: 640px;
+    max-height: 880px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .dog-img {
+    min-width: 920px;
+    max-height: 1800px;
+  }
+  
+}
+
+/* Extra large devices (laptops/desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .dog-img {
+    min-width: 440px;
+    max-height: 660px;
+  }
+  .breeds {
+    font-size: 1.2rem;
+  }
+  .brend {
+    font-size: 2.5rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1600px and up) */
+@media only screen and (min-width: 1600px) {
+  .dog-img {
+    min-width: 560px;
+    max-height: 800px;
+  }
+  .breeds {
+    font-size: 1.0rem;
   }
 }
