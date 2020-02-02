@@ -1,4 +1,5 @@
-/********** CSS Reset **********/
+/******************** CSS Reset ********************/
+
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -12,7 +13,6 @@ body, h1 {
   margin: 0;
   padding: 0;
   font-weight: normal;
-  
 }
 
 img {
@@ -21,7 +21,7 @@ img {
 }
 
 
-/********** Header **********/
+/******************** Header ********************/
 
 header {
   background-color: cadetblue;
@@ -41,7 +41,7 @@ header {
 }
 
 
-/********** Section **********/
+/******************** Section ********************/
 
 section {
   margin-top: 1.0rem;
@@ -51,9 +51,10 @@ section {
 }
 
 .loader {
+  font-size: 3.0rem;
+  margin-top: 5rem;
   display: none;
   text-align: center;
-  font-size: 3.0rem;
   animation: rotate 1.5s infinite linear;
 }
 
@@ -71,11 +72,17 @@ section {
   }
 }
 
+
+/******************** @media ********************/
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .dog-img {
     min-width: 460px;
     max-height: 700px;
+  }
+  .loader {
+    font-size: 5.0rem;
   }
 }
 
@@ -84,6 +91,9 @@ section {
   .dog-img {
     min-width: 580px;
     max-height: 800px;
+  }
+  .loader {
+    font-size: 5.0rem;
   }
 }
 
@@ -101,7 +111,6 @@ section {
     min-width: 920px;
     max-height: 1800px;
   }
-  
 }
 
 /* Extra large devices (laptops/desktops, 1200px and up) */
@@ -115,6 +124,9 @@ section {
   }
   .brend {
     font-size: 2.5rem;
+  }
+  .loader {
+    font-size: 3.0rem;
   }
 }
 
